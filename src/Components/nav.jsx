@@ -14,17 +14,17 @@ const Nav = ({numberofItems}) => {
     return (
         <nav>
             <div className="nav__container">
-                <Link to="/">
+                <Link to="Book-Project/">
                 <img src={LibraryLogo} className='logo' alt="" />
                 </Link>
                 <ul className='nav__links'>
                 <li className="nav__list">
-            <Link to="/" className="nav__link">
+            <Link to="Book-Project/" className="nav__link">
               Home
             </Link>
           </li>
           <li className="nav__list">
-          <Link to="/books" className="nav__link nav__link--primary">
+          <Link to="Book-Project/books" className="nav__link nav__link--primary">
               Books
             </Link>
           </li>
@@ -32,7 +32,7 @@ const Nav = ({numberofItems}) => {
             <FontAwesomeIcon icon="bars" />
           </button>
           <li className="nav__icon">
-            <Link to="/cart" className="nav__link">
+            <Link to="Book-Project/cart" className="nav__link">
               <FontAwesomeIcon icon="shopping-cart" />
             </Link>
             {numberofItems > 0 && (
@@ -46,13 +46,13 @@ const Nav = ({numberofItems}) => {
                     </button>
                     <ul className="menu__links">
                         <li className="menu__list">
-                            <Link className="menu__link" to="/">Home</Link>
+                            <Link className="menu__link" to="Book-Project/">Home</Link>
                         </li>
                         <li className="menu__list">
-                            <Link className="menu__link" to="/books">Books</Link>
+                            <Link className="menu__link" to="Book-Project/books">Books</Link>
                         </li>
                         <li className="menu__list">
-                            <Link className="menu__link" to="/cart">Cart</Link>
+                            <Link className="menu__link" to="Book-Project/cart">Cart</Link>
                         </li>
                     </ul>
                 </div>

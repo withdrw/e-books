@@ -8,16 +8,16 @@ const Footer = () => {
         <footer>
             <div className='container'>
                 <div className="row row__column">
-                    <Link to="/">
+                    <Link to="Book-Project/">
                         <figure className='footer__logo'>
                             <img className='footer__logo--img' src={Logo} alt="" />
                         </figure>
                     </Link>
                     <div className='footer__list'>
-                        <Link to="/" className='footer__link'>Home</Link>
+                        <Link to="Book-Project/" className='footer__link'>Home</Link>
                         <span className='footer__link no-cursor'>About</span>
-                        <Link to="/books"className='footer__link' >Books</Link>
-                        <Link to="/cart" className='footer__link'>Cart</Link>
+                        <Link to="Book-Project/books"className='footer__link' >Books</Link>
+                        <Link to="Book-Project/cart" className='footer__link'>Cart</Link>
                     </div>
                     <div className='footer__copyright'>
                         Copyright 2023 Library

@@ -27,10 +27,10 @@ const BookInfo = ({ books, addToCart, cart }) => {
         <div className="books__container">
           <div className="row">
             <div className="book__selected--top">
-              <Link to="/books" className="book__link">
+              <Link to="Book-Project/books" className="book__link">
                 <FontAwesomeIcon icon="arrow-left"></FontAwesomeIcon>
               </Link>
-              <Link to="/books" className="book__link">
+              <Link to="Book-Project/books" className="book__link">
                 <h2 className="book__selected--title--top">Books</h2>
               </Link>
             </div>
