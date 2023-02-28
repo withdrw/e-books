@@ -12,8 +12,14 @@ function App() {
   const [cart, setCart] =useState([]);
 
   function addToCart(book){
-    setCart([...cart, {...book, quantity:1}])
+   
+          setCart([...cart, {...book, quantity:1}])
+    
   }
+  useEffect(()=>{
+  
+  },[cart])
+
 
 function changeQuantity(book, quantity) {
   setCart(
@@ -22,11 +28,14 @@ function changeQuantity(book, quantity) {
     ?{
       ...item,
       quantity:+quantity,
-    }
+    }  
     : item
     )
-  )
-}
+  )  
+}  
+
+
+
 
 function removeItem(item){
  setCart(cart.filter(book=>book.id!==item.id))
@@ -40,9 +49,6 @@ function numberofItems(){
   return counter
 }
 
- useEffect(()=>{
-
- },[cart])
 
 function totalPrice (){
   let total = 0;
@@ -63,10 +69,10 @@ function totalPrice (){
         <div className="App">
           <Nav numberofItems={numberofItems()} />
           <Routes>
-          <Route path="Book-Project/" element={<Home></Home>}></Route>
-          <Route path="Book-Project/books" element={<Book books={books}></Book>}></Route>
+          <Route path="/Book-Project/" element={<Home></Home>}></Route>
+          <Route path="/Book-Project/books" element={<Book books={books}></Book>}></Route>
           <Route
-            path="Book-Project/books/:id"
+            path="/Book-Project/books/:id"
             element= <BookInfo books={books} addToCart={addToCart} />></Route>
             <Route path="Book-Project/cart" element ={<Cart books={books} removeItem={removeItem} cart={cart} changeQuantity= {changeQuantity} totals={totalPrice()} ></Cart>}/>
             </Routes>

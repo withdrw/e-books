@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import Price from "../Components/ui/Price";
 import Rating from "../Components/ui/Rating";
@@ -8,9 +8,11 @@ import Book from "../Components/ui/Books";
 const BookInfo = ({ books, addToCart, cart }) => {
   const { id } = useParams();
   const book = books.find((book) => +book.id === +id);
+  const [added, setadded] = useState(false)
   
 
   function addBookToCart(book) {
+   setadded(true)
     addToCart(book)
   }
 
@@ -27,10 +29,10 @@ const BookInfo = ({ books, addToCart, cart }) => {
         <div className="books__container">
           <div className="row">
             <div className="book__selected--top">
-              <Link to="Book-Project/books" className="book__link">
+              <Link to="/Book-Project/books" className="book__link">
                 <FontAwesomeIcon icon="arrow-left"></FontAwesomeIcon>
               </Link>
-              <Link to="Book-Project/books" className="book__link">
+              <Link to="/Book-Project/books" className="book__link">
                 <h2 className="book__selected--title--top">Books</h2>
               </Link>
             </div>
@@ -60,12 +62,12 @@ const BookInfo = ({ books, addToCart, cart }) => {
                     omnis alias impedit.
                   </p>
                 </div>
-                
-                  {/* <Link to={`/cart`} className="book__link">
+                {added ?
+                  <Link to={`/Book-Project/cart`} className="book__link">
                   <button className="btn">Checkout</button>
-                  </Link> */}
+                  </Link>:
                   <button className="btn" onClick={()=>addBookToCart(book)}>Add to cart</button>
-               
+               }
               
               </div>
             </div>
