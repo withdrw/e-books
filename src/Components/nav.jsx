@@ -14,17 +14,17 @@ const Nav = ({numberofItems}) => {
     return (
         <nav>
             <div className="nav__container">
-                <Link to="e-book/">
+                <Link to="e-books/">
                 <img src={LibraryLogo} className='logo' alt="" />
                 </Link>
                 <ul className='nav__links'>
                 <li className="nav__list">
-            <Link to="e-book/" className="nav__link">
+            <Link to="e-books/" className="nav__link">
               Home
             </Link>
           </li>
           <li className="nav__list">
-          <Link to="e-book/books" className="nav__link nav__link--primary">
+          <Link to="e-books/books" className="nav__link nav__link--primary">
               Books
             </Link>
           </li>
@@ -32,7 +32,7 @@ const Nav = ({numberofItems}) => {
             <FontAwesomeIcon icon="bars" />
           </button>
           <li className="nav__icon">
-            <Link to="e-book/cart" className="nav__link">
+            <Link to="e-books/cart" className="nav__link">
               <FontAwesomeIcon icon="shopping-cart" />
             </Link>
             {numberofItems > 0 && (
@@ -46,13 +46,13 @@ const Nav = ({numberofItems}) => {
                     </button>
                     <ul className="menu__links">
                         <li className="menu__list">
-                            <Link className="menu__link" to="e-book/">Home</Link>
+                            <Link className="menu__link" to="e-books/">Home</Link>
                         </li>
                         <li className="menu__list">
-                            <Link className="menu__link" to="e-book/books">Books</Link>
+                            <Link className="menu__link" to="e-books/books">Books</Link>
                         </li>
                         <li className="menu__list">
-                            <Link className="menu__link" to="e-book/cart">Cart</Link>
+                            <Link className="menu__link" to="e-books/cart">Cart</Link>
                         </li>
                     </ul>
                 </div>

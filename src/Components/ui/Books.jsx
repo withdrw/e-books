@@ -34,13 +34,13 @@ const Book = ({ book }) => {
         </>
       ) : (
         <>
-          <Link to={`/e-book/books/${book.id}`}>
+          <Link to={`/e-books/books/${book.id}`}>
             <figure className="book__img--wrapper">
               <img className="book__img" src={img.src} alt="" />
             </figure>
           </Link>
           <div className="book__title">
-            <Link to={`/e-book/books/${book.id}`} className="book__title--link">
+            <Link to={`/e-books/books/${book.id}`} className="book__title--link">
               {book.title}
             </Link>
           </div>
