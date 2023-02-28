@@ -69,12 +69,12 @@ function totalPrice (){
         <div className="App">
           <Nav numberofItems={numberofItems()} />
           <Routes>
-          <Route path="/Book-Project/" element={<Home></Home>}></Route>
-          <Route path="/Book-Project/books" element={<Book books={books}></Book>}></Route>
+          <Route path="/e-book/" element={<Home></Home>}></Route>
+          <Route path="/e-book/books" element={<Book books={books}></Book>}></Route>
           <Route
-            path="/Book-Project/books/:id"
+            path="/e-book/books/:id"
             element= <BookInfo books={books} addToCart={addToCart} />></Route>
-            <Route path="Book-Project/cart" element ={<Cart books={books} removeItem={removeItem} cart={cart} changeQuantity= {changeQuantity} totals={totalPrice()} ></Cart>}/>
+            <Route path="e-book/cart" element ={<Cart books={books} removeItem={removeItem} cart={cart} changeQuantity= {changeQuantity} totals={totalPrice()} ></Cart>}/>
             </Routes>
           <Footer />
         </div>

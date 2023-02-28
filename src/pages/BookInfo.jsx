@@ -29,10 +29,10 @@ const BookInfo = ({ books, addToCart, cart }) => {
         <div className="books__container">
           <div className="row">
             <div className="book__selected--top">
-              <Link to="/Book-Project/books" className="book__link">
+              <Link to="/e-book/books" className="book__link">
                 <FontAwesomeIcon icon="arrow-left"></FontAwesomeIcon>
               </Link>
-              <Link to="/Book-Project/books" className="book__link">
+              <Link to="/e-book/books" className="book__link">
                 <h2 className="book__selected--title--top">Books</h2>
               </Link>
             </div>
@@ -63,7 +63,7 @@ const BookInfo = ({ books, addToCart, cart }) => {
                   </p>
                 </div>
                 {added ?
-                  <Link to={`/Book-Project/cart`} className="book__link">
+                  <Link to={`/e-book/cart`} className="book__link">
                   <button className="btn">Checkout</button>
                   </Link>:
                   <button className="btn" onClick={()=>addBookToCart(book)}>Add to cart</button>
